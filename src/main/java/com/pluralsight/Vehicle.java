@@ -8,7 +8,7 @@ public class Vehicle {
     private int odometerReading;        //(ex: 32775)
     private float price;                //(ex: 12250.00) (no Lamborghinis here!
 
-    public Vehicle(String vehicleId, String makeModel, int odometerReading, String color, float price) {
+    public Vehicle(long vehicleId, String makeModel, int odometerReading, String color, float price) {
         this.vehicleId = vehicleId;
         this.makeModel = makeModel;
         this.odometerReading = odometerReading;
@@ -57,7 +57,7 @@ public class Vehicle {
     }
     public String toString() {
         // Tip: format price and pad columns cleanly
-        return String.format("%-8d  %-20s  %-8s  %7d miles  $%,.2f",
+        return String.format("%d  %s  %s  %d miles  $%,.2f",
                 vehicleId, makeModel, color, odometerReading, price);
     }
 
